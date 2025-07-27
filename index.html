@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Memory Game</title>
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen">
+
+  <!-- Title -->
+  <div class = "font-sans text-4xl font-semibold">Memory Game</div>
+
+  <!-- div Game -->
+  <div class="flex flex-col justify-center w-1/2 h-1/2 bg-blue-200 rounded shadow-xl mt-4 relative">
+    
+    <!-- Game -->
+    <div id = "Game_Score" class = "font-sans text-xl absolute top-0 left-0 p-4">Score : 0</div>
+    <div id = "Game_Section" class="flex justify-center items-center w-auto h-1/2 mt-2">
+      <p id = "Game_Text" class = "text-center text-xl font-sans sm:text-2xl md:text-3xl lg:text-4xl break-words max-w-full"></p>
+    </div>
+
+    <!-- Player Input-->
+    <input id = "Input_Section" type="text" placeholder="Input Here!" autocomplete="off" class="mx-4 mt-2 p-2 rounded bg-white focus:outline-black focus:outline-solid hidden" disabled>
+    
+    <!-- Button Start-->
+    <div id = "Button_Section" class = "flex flex-row justify-center">
+      <button id = "Game_Button" type = "button" class = "bg-yellow-300 w-[120px] p-2 mt-4 hover:bg-yellow-500 rounded" onclick = "StartGame()">Start!!</button>
+      <button id = "Game_Button_End" type = "button" class = "bg-red-300 w-[120px] p-2 mt-4 hover:bg-red-500 rounded hidden" onclick = "RestartGame()">Restart!!</button>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div id ="footer" class = "bottom-0 bg-yellow-400 w-full absolute text-center">
+      Developed By Panupong Saisopon
+  </div>
+
+  <script src = "app.js"></script>
+
+</body>
+</html>
