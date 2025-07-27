@@ -4,21 +4,17 @@ let length =  3;
 let number = [1,2,3,4,5,6,7,8,9];
 let inputbox = document.getElementById("Input_Section"); //Player input box.
 let score = 0;
-let Correct = new Audio("Correct.mp3"); //Music, When answer is correct.
-let Game_Over = new Audio("Game_Over.mp3"); //Music, when answer is incorrect.
-let Wait_Song = new Audio("Wait_Song.mp3"); //Music, while show the numbers.
-let Lobby_Song = new Audio("Lobby_Song.mp3"); //Music when window load.
+let Correct = new Audio("Sound/Correct.mp3"); //Music, When answer is correct.
+let Game_Over = new Audio("Sound/Game_Over.mp3"); //Music, when answer is incorrect.
+let Wait_Song = new Audio("Sound/Wait_Song.mp3"); //Music, while show the numbers.
 
 window.addEventListener("load" , () =>{ //Window load hide the number box.
     let Game = document.getElementById("Game_Section");
     Game.classList.add("hidden");
-    Lobby_Song.loop = true;
-    Lobby_Song.play();
 });
 
 function StartGame()
 {
-    Lobby_Song.pause();
     let Button_Start = document.getElementById("Game_Button");
     inputbox.classList.remove("hidden");
     Button_Start.classList.add("hidden");
